@@ -54,3 +54,18 @@ Assumptions:
 ```bash
 git clone https://github.com/eddinenasri/black-scholes-streamlit.git
 cd black-scholes-streamlit
+'''
+
+### 2. Create a virtual environment (recommended)
+```bash
+python3 -m venv venv
+source venv/bin/activate
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+
+### 4. Run the app
+```bash
+
+streamlit run professional_black_scholes_go.py
