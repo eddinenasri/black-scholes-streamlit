@@ -22,6 +22,22 @@ def black_scholes_put(S, K, T, r, sigma):
 st.set_page_config(page_title="Black-Scholes Option Pricer", layout="wide")
 st.title("📊 Black-Scholes Option Pricing")
 
+
+# ===============================
+# Ownership
+# ===============================
+st.sidebar.markdown(
+    """
+    <div style="text-align: center; padding: 12px; background: linear-gradient(135deg, #667eea 0%,#764ba2 100%); border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+        <span style="font-size: 11px; color: rgba(255,255,255,0.85); letter-spacing: 1px;">CREATED BY</span><br>
+        <a href="https://www.linkedin.com/in/eddine-nasri-71a5b2160/" target="_blank" style="font-size: 15px; font-weight: 600; color: #ffffff; text-decoration: none; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+            Eddine Nasri
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # ===============================
 # Sidebar Inputs
 # ===============================
