@@ -63,11 +63,50 @@ max_vol = st.sidebar.slider("Max Volatility", 0.01, 1.0, 0.8)
 call_val = black_scholes_call(S0, K, T, r, sigma_input)
 put_val  = black_scholes_put(S0, K, T, r, sigma_input)
 
-col1, col2 = st.columns(2)
-col1.metric("Call Option Price", f"${call_val:.2f}")
-col2.metric("Put Option Price", f"${put_val:.2f}")
+st.subheader("Option Prices")
 
-st.markdown("---")
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown(
+        f"""
+        <div style="
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #7fcf9b;
+            text-align: center;
+        ">
+            <div style="font-size:18px; font-weight:600; color:black;">
+                Call Price
+            </div>
+            <div style="font-size:32px; font-weight:800; color:black;">
+                ${call_val:.2f}
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col2:
+    st.markdown(
+        f"""
+        <div style="
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e07b7b;
+            text-align: center;
+        ">
+            <div style="font-size:18px; font-weight:600; color:black;">
+                Put Price
+            </div>
+            <div style="font-size:32px; font-weight:800; color:black;">
+                ${put_val:.2f}
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
 
 # ===============================
 # Heatmap Data
